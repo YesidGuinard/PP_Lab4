@@ -1,0 +1,64 @@
+<div class="container mt-3">
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="mb-3 text-center">
+                <span class="text-muted">Paises</span>
+            </h4>
+
+            <div style="width: 460px;height: 450px;;overflow:auto;">
+                <app-tabla-paises (eventSelectedItem)="paisSeleccionado($event)"></app-tabla-paises>
+            </div>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Alta Actor</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label for="id">Id</label>
+                        <input type="text" class="form-control" [(ngModel)]="actorTemp.id" id="id" name="id"  required [ngModelOptions]="{standalone: true}">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" [(ngModel)]="actorTemp.nombre" id="nombre" name="nombre" required [ngModelOptions]="{standalone: true}">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" [(ngModel)]="actorTemp.apellido" id="apellido" name="apellido" required [ngModelOptions]="{standalone: true}">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="sexo">Sexo</label>
+                        <input type="text" class="form-control" [(ngModel)]="actorTemp.sexo" id="sexo" name="sexo" required [ngModelOptions]="{standalone: true}">
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="nacimiento">Fecha De Nacimiento</label>
+                    <input type="date" class="form-control" [(ngModel)]="actorTemp.fechaDeNacimiento" id="nacimiento"  required [ngModelOptions]="{standalone: true}">
+                    <div class="invalid-feedback" style="width: 100%;">
+                        Fecha es requerida
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" (click)="crearActor($event)" type="submit">Crear</button>
+            </form>
+        </div>
+    </div>
