@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Pais} from '../../class/pais';
+import {Component, OnInit} from '@angular/core';
 import {Actor} from '../../class/actor';
 
 @Component({
@@ -8,8 +7,7 @@ import {Actor} from '../../class/actor';
     styleUrls: ['./alta-actor.component.css']
 })
 export class AltaActorComponent implements OnInit {
-    @Input() pais: Pais;
-
+    pais;
     actorTemp: Actor;
 
     constructor() {
@@ -21,10 +19,13 @@ export class AltaActorComponent implements OnInit {
 
     paisSeleccionado(pais) {
 
-        this.pais = pais;
+        this.actorTemp.pais = pais;
+        this.pais = pais.name;
+        console.log(pais);
     }
 
     crearActor(event) {
+
 
     }
 

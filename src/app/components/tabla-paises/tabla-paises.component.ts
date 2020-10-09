@@ -12,7 +12,6 @@ export class TablaPaisesComponent implements OnInit {
 
     listadoPaises: Pais[] = [];
 
-
     @Output() eventSelectedItem: EventEmitter<Pais> = new EventEmitter();
 
     constructor(private paisesService: PaisesService) {
@@ -31,8 +30,8 @@ export class TablaPaisesComponent implements OnInit {
 
     }
 
-    onSelectUsuario(pais: Pais) {
+    onPaisSelecionado(pais: Pais) {
         this.eventSelectedItem.emit(pais);
-        console.log('pais select: ', pais);
+       // console.log('pais select: ', pais);
     }
 }
