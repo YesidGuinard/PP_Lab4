@@ -17,7 +17,7 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="id">Id</label>
-                        <input type="text" class="form-control" [(ngModel)]="actorTemp.id" id="id" name="id" required
+                        <input type="text" class="form-control" [(ngModel)]="act.id" id="id" name="id" required
                                [ngModelOptions]="{standalone: true}" readonly="true">
                         <div class="invalid-feedback">
                             Requerido
@@ -26,7 +26,7 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" [(ngModel)]="actorTemp.nombre" id="nombre" name="nombre"
+                        <input type="text" class="form-control" [(ngModel)]="act.nombre" id="nombre" name="nombre"
                                required [ngModelOptions]="{standalone: true}">
                         <div class="invalid-feedback">
                             Requerido
@@ -35,7 +35,7 @@
 
                     <div class="col-md-6 mb-3">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" [(ngModel)]="actorTemp.apellido" id="apellido"
+                        <input type="text" class="form-control" [(ngModel)]="act.apellido" id="apellido"
                                name="apellido" required [ngModelOptions]="{standalone: true}">
                         <div class="invalid-feedback">
                             Requerido
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="sexo">Seleccione Sexo:</label>
-                        <select id="sexo" name="sexo" class="form-control" [(ngModel)]="actorTemp.sexo" required
+                        <select id="sexo" name="sexo" class="form-control" [(ngModel)]="act.sexo" required
                                 [ngModelOptions]="{standalone: true}">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
@@ -58,7 +58,7 @@
                 </div>
                     <div class="mb-3">
                         <label for="nacimiento">Fecha De Nacimiento</label>
-                        <input type="date" class="form-control" [(ngModel)]="actorTemp.fechaDeNacimiento"
+                        <input type="date" class="form-control" [(ngModel)]="act.fechaDeNacimiento"
                                id="nacimiento"
                                required [ngModelOptions]="{standalone: true}">
                         <div class="invalid-feedback" style="width: 100%;">
