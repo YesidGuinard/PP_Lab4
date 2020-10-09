@@ -8,7 +8,6 @@ import {Pais} from '../../class/pais';
 })
 export class PrincipalComponent implements OnInit {
 
-    selectedItem: Pais;
 
     constructor() {
     }

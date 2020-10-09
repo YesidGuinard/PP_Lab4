@@ -5,7 +5,7 @@ import {AltaActorComponent} from './components/alta-actor/alta-actor.component';
 
 const routes: Routes = [
 
-  { path: '', component: AltaActorComponent }
+  { path: '', component: PrincipalComponent }
 
 ];
 @NgModule({
